@@ -1,0 +1,6 @@
+@HttpClientUsageAPI_HostAddress = http://localhost:5049
+
+GET {{HttpClientUsageAPI_HostAddress}}/api/CountryDetails/
+Accept: application/json
+
+###
