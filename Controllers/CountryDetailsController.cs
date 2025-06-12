@@ -16,8 +16,8 @@ namespace HttpClientUsageAPI.Controllers
         }
 
         [HttpGet(Name = "GetCountryDetails")]
-        [ProducesResponseType(typeof(object), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(object), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(CountryDetailsResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<CountryDetailsResult>> GetCountryDetails()
         {
             var result = await _restCountriesCallerService.GetCountryDetailsAsync();
